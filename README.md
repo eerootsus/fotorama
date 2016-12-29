@@ -4,6 +4,10 @@ This is a fork of the wonderful Fotorama plugin by Artem Polikarpov.
 > **https://github.com/artpolikarpov/fotorama.git**
 
 ## Changes
+
+### 4.6.4-c
+Missed that code convention is lower cased options. Fixed.
+
 ### 4.6.4-b
 Options includes `onShowCallback` which will be triggered before transitioning to a new slide.
 Callback must return `boolean`: `true` to allow Fotorama to continue normally, `false` to stop slide switching.

@@ -71,7 +71,7 @@ jQuery.Fotorama = function ($fotorama, opts) {
       o_shadows,
       o_rtl,
       o_keyboard,
-      o_onShowCallback,
+      o_onshowcallback,
       lastOptions = {},
 
       measures = {},
@@ -354,9 +354,9 @@ jQuery.Fotorama = function ($fotorama, opts) {
         .addClass(classes.add.join(' '))
         .removeClass(classes.remove.join(' '));
 
-    o_onShowCallback = function(){return true;};
-    if (opts.onShowCallback && typeof opts.onShowCallback === 'function') {
-      o_onShowCallback = opts.onShowCallback;
+    o_onshowcallback = function(){return true;};
+    if (opts.onshowcallback && typeof opts.onshowcallback === 'function') {
+      o_onshowcallback = opts.onshowcallback;
     }
 
     lastOptions = $.extend({}, opts);
@@ -1004,7 +1004,7 @@ jQuery.Fotorama = function ($fotorama, opts) {
   that.show = function (options) {
     //console.log('that.show');
     ////console.time('that.show prepare');
-    if (o_onShowCallback() === false) {
+    if (o_onshowcallback() === false) {
         return;
     }
 
